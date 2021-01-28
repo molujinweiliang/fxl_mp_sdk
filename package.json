@@ -8,6 +8,7 @@
     "url": "git+https://github.com/molujinweiliang/abstract-bluetooth.git"
   },
   "scripts": {
+    "install docsify": "npm install -i docsify -g",
     "docs": "docsify serve docs"
   },
   "author": "",
