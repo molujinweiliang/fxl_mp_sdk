@@ -1,4 +1,4 @@
-![logo](_media/logo.png)
+![logo](_media/logo.png ':class=coverimg')
 
 # 蜂星锁对接文档 <small>1.0</small>
 
