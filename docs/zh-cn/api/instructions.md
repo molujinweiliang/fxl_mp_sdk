@@ -1,46 +1,55 @@
-# 公共参数说明
+#放在header里面的参数：
 
-##### 公共参数
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
-|timeStamp |是  |timestamp |时间戳（不得超过服务器20分钟，超过签名结果无效）   |
-|accessKey |是  |string | 商家的accessKey    |
-|sign     |是  |string | 签名    |
+|CLIENT | 是  |string |写SDK1.1,调用接口终端设备   |
+|ACCESS-KEY | 是  |string |惊奇锁平台分配的ACCESS-KEY   |
+|PLATFORM | 是  |string |调用设备系统，IOS或者android,大小写无所谓   |
+|DEVICE | 是  |string |手机型号，比如：iphone11，MIX3   |
+|SYSTEMVERSION |否  |string |系统的版本号，比如：android10，IOS14.4   |
+|TOKEN | 是  |string |签名校验的token   |
+
+TOKEN算法：
+第一步：
+String access_key = ""; //惊奇锁平台分配的access_key;
+String access_secret = "";//惊奇锁平台分配的access_secret;
+String key = "c2e2a195b0a8add57542651f0130cc53"; //写死
+String iv = "SDKV@1.1";//写死
+
+第二步：
+String str = access_key + "#" + access_secret + "@" + key + "&" + iv;
+
+第三步骤：
+str = md5(str);
+
+第四步：
+str = base64_encode(str) ;
 
 
-签名算法：
-//{"a":"1233", "c": "789", "b":"456" }
-ksort($params); //按照键升序（{"a":"1233",  "b":"456", "c": "789" }）
-$str = "";
-foreach ($params as $k=> $v){
-	$str .= $k."=".$v."&"; 
-}
-//"a=1233&b=456&c=789&"
-$stringSignTemp = $str."key=".$key;//"a=1233&b=456&c=789&key=xasxasx",key是商家的accessSecret 
-$stringSignTemp = urlencode($stringSignTemp);//字符串要url编码一下,防止有中文
-$signValue = strtoupper(md5($stringSignTemp));//然后md5之后转大写
-
-2:返回参数
-$str = "7fea874f1675cf1b5eeb5ae758ac6cc6b618aa986c5d83117b576a84596a1e3594a25041e9868f424aae7964c348bd758c28dad8e5955c2319246a5a5cc0dda764792b09904e36d92093084de06dcbabdbdcddbb0571974be30ccc6e90e6f85dc6890c70847dfa7097d0708e5d94af2b6643f282bcd26ddd5210851579813fc8567255e3d20e2449e51330c307af98bace6030fd744eb280e54e08f79d801ff41f22a9c4d7c4d355cacad190b15187b2d94067121529e8a057efd65d1115df22ddd59292ca51718cbc712194d925456dba76094ab604ca02148fd73c1daf90e8dca611fca8152d7c559fd022402851e87a954e29be7e7332b17305e42cc7a724845b8e628e8c3459575c776930662ce72a985884b8b85ab2c8ff16e05eb189fbf5b219a51e0b3b09b4b142db747d1c4918fbd98e48a3d484188c88ea80d0b967a5c6ff09a070b039ada7b67528e8c8c00e3edd7c77b86d0d07b0d0a63055a2d3d6c0542bff7c5b6be54f10e879ba8947";
-
-$iv= "Mv@L)ock";
-$key = 商家的accessSecret
-
-解密出来就是:
+#请求参数只有一个data：
+data算法是：
+第一步：将你的业务参数转成json
+比如：
 {
-    "errno": 0,
-    "errmsg": "",
-    "statusCode": 200,
-    "data": {
-        "uid": 17,
-        "mobile": "17682306667",
-        "nickname": "周阳",
-        "user_name": "",
-        "sex": 0,
-        "avatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83er4ulmIJSvjhoNYr8ttmpNEub23SOicsicYgIomNG9lJlOdLibqq1GQdWJFooPTUrGZsGltSpHajysRA/132",
-        "province": "Anhui",
-        "city": "Luan",
-        "is_auth": 1,
-        "create_time": "2019-12-04 10:12:13"
-    }
+	"mobile": "xxxxx",
+	"password": "ssdsdasda",
+	"code": "324234"
 }
+#PS：手机号码是公共参数
+
+第二步：
+进行des加密：
+加密方式是：DES-CBC
+output 的类型是：hex
+key就是上述token算法中的key
+iv就是上述token算法中的iv
+
+Des des = new Des(key, 'DES-CBC', Des::OUTPUT_HEX, iv);
+
+String str = des.encrypt({
+	"mobile": "xxxxx",
+	"password": "ssdsdasda",
+	"code": "324234"
+});
+
+返回的参数也是需要解密的，解密的key和iv都是上述所有的key和iv
