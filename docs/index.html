@@ -2,21 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>惊奇锁对接文档</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+<!--  <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css">-->
+<!--   <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple-dark.css">-->
+   <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-defaults.css">
+
 </head>
+<style>
+  .sidebar img{
+    width: 60%;
+  }
+  @media screen and (min-device-width: 1026px){
+    .markdown-section{
+      max-width: calc(100% - 80px);
+    }
+  }
+
+
+</style>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      name: '惊奇锁',
+      logo: '/_media/logo.png',
+      coverpage: true, //主页
+      onlyCover: false,
+      loadSidebar: true, // 侧边栏
+      auto2top: true,//切换页面后是否自动跳转到页面顶部。
+      maxLevel   : 2,
+      subMaxLevel: 2,
+      mergeNavbar: true,// 小屏设备下合并导航栏到侧边栏。
+      loadNavbar: true
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://unpkg.com/docsify-themeable"></script>
+  <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
