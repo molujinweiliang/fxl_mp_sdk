@@ -1,6 +1,5 @@
-// import cryptoJs from 'crypto-js';
-// import cryptoJs from './crypto-js';
-const cryptoJs = require('crypto-js');
+import cryptoJs from 'crypto-js';
+// const cryptoJs = require('crypto-js');
 var CBC = {};
 
 CBC.encryptDes = (message, key, iv) => {

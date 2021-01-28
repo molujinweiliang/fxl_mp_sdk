@@ -1,11 +1,13 @@
-import { http,ajaxWithImage, upload, upLoadOss } from './http.js';
-const api = {};
+import { http,ajaxWithImage } from './http.js';
+
+//错误日志
+export const errorLog = (params) => http('sdk/v1/mini/init', params,'Post');
 
 //登录注册
-api.login = (params) => http('sdk/v1/mini/init', params,'Post');
+export const login = (params) => http('sdk/v1/mini/init', params,'Post');
 
 // 开锁
-api.openLock = (params,filePath) => {
+export const openLock = (params,filePath) => {
   if(filePath){
     return ajaxWithImage('sdk/v1/mini/lock/open', filePath, params,false);
   }else{
@@ -15,17 +17,15 @@ api.openLock = (params,filePath) => {
 };
 
 // 开锁成功的回调
-api.openCallback =(params) => http('sdk/v1/mini/lock/openCallBack', params,'Post', false);
+export const openCallback =(params) => http('sdk/v1/mini/lock/openCallBack', params,'Post', false);
 
 // 身份证识别
-api.ocr =(params) => http('sdk/v1/mini/ocr/idCard', params,'Post', false);
+export const ocr =(params) => http('sdk/v1/mini/ocr/idCard', params,'Post', false);
 
 // 身份证确认
-api.confirm =(params) => http('sdk/v1/mini/user/sure/idInfo', params,'Post', false);
+export const confirm =(params) => http('sdk/v1/mini/user/sure/idInfo', params,'Post', false);
 
 // 人脸认证
-api.faceAuth =(params) => http('sdk/v1/mini/faceAuth', params,'Post', false);
+export const faceAuth =(params) => http('sdk/v1/mini/faceAuth', params,'Post', false);
 
 
-export default api;
-module.exports = api;

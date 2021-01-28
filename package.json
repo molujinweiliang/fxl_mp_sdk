@@ -2,19 +2,29 @@
   "name": "fxl-mp-sdk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/molujinweiliang/abstract-bluetooth.git"
+    "url": "git+https://github.com/molujinweiliang/fxl_mp_sdk.git"
   },
   "scripts": {
     "install docsify": "npm install -i docsify -g",
-    "docs": "docsify serve docs"
+    "docs": "docsify serve docs",
+    "built": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
+  "homepage": "https://molujinweiliang.github.io/fxl_mp_sdk/",
   "dependencies": {
     "abstract-bluetooth": "^1.0.0",
     "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "path": "^0.12.7",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0"
   }
 }

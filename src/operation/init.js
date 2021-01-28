@@ -1,6 +1,7 @@
 import { AbstractBlueTooth, errorMsg, tools } from 'abstract-bluetooth';
+console.log(AbstractBlueTooth)
 const { errorCodeCallback, errorLogFunction } =  errorMsg;
-import { login, errorLog } from "@/static/js/modules/bluetooth";
+import { login, errorLog } from "../utils/api";
 import { accessKeyStorageKey, accessSecretStorageKey, userInfoStorageKey } from '../utils/urlStore';
 import store from "../utils/store";
 
