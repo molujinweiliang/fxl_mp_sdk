@@ -1,4 +1,4 @@
-![logo](https://img.mvlock.cn/img/logo1.png)
+![logo](_media/logo.jpeg)
 
 # 蜂星锁对接文档 <small>1.0</small>
 
