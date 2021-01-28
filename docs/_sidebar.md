@@ -8,4 +8,6 @@
     * [开锁](/zh-cn/api/openLock.md "开锁")
     * [开锁回调](/zh-cn/api/openCallBack.md "开锁回调")
     * [获取锁的详情](/zh-cn/api/lockInfo.md "获取锁的详情")
-- [SDK](README.md)
+    * [api错误码](/zh-cn/api/lockInfo.md "获取锁的详情")
+- [SDK](/zh-cn/sdk/errorMsg.md)
+    * [SDK错误码](/zh-cn/sdk/errorMsg.md "SDK错误码")

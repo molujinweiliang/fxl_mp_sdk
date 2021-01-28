@@ -2,22 +2,27 @@ import { AbstractBlueTooth, errorMsg, tools } from 'abstract-bluetooth';
 const { errorCodeCallback, errorLogFunction } =  errorMsg;
 import { login, errorLog } from "@/static/js/modules/bluetooth";
 import { accessKeyStorageKey, accessSecretStorageKey, userInfoStorageKey } from '../utils/urlStore';
+import store from "../utils/store";
 
-export default class ResetLock extends AbstractBlueTooth{
+export default class Init extends AbstractBlueTooth{
     constructor(){
         super()
     }
     init(self, params) {
-        let testResult = this.initDataTest(params);
-        if (!testResult) return;
-        store.save(accessKeyStorageKey, params.accessKey);
-        store.save(accessSecretStorageKey, params.accessSecret);
-        login(params.userInfo)
-            .then(res => {
-                store.save(userInfoStorageKey, res)
-            })
-            .catch(err => {
-            })
+        return new Promise((resolve, reject) => {
+            let testResult = this.initDataTest(params);
+            if (!testResult) return reject({errno: -1, errmsg: '请传入正确的初始化参数'});
+            store.save(accessKeyStorageKey, params.accessKey);
+            store.save(accessSecretStorageKey, params.accessSecret);
+            login(params.userInfo)
+                .then(res => {
+                    store.save(userInfoStorageKey, res)
+                    resolve({errno: 0, errmsg: '登陆成功'});
+                })
+                .catch(err => {
+                    resolve({errno: -1, errmsg: '登陆失败'});
+                })
+        })
     }
     // 校验初始化数据格式
     initDataTest(initData) {

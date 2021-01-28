@@ -6,6 +6,7 @@ import OpenHistory from './operation/open-history.js';
 import OpenLock from './operation/open-lock';
 import ResetLock from './operation/reset-lock.js';
 import SetPassword from './operation/set-password.js';
+import Init from "./operation/init";
 
 
 module.exports = {
@@ -17,4 +18,5 @@ module.exports = {
     OpenLock,
     ResetLock,
     SetPassword,
+    Init,
 };
