@@ -9,7 +9,7 @@
     "url": "git+https://github.com/molujinweiliang/fxl_mp_sdk.git"
   },
   "scripts": {
-    "install docsify": "npm install docsify -g",
+    "install docsify": "npm i docsify-cli -g",
     "docs": "docsify serve docs",
     "built": "webpack --config webpack.config.js"
   },
