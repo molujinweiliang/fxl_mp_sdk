@@ -1,4 +1,4 @@
-## SDK错误码
+### SDK错误码
 调用sdk里面的方法，要么会抛出promise，要么会抛出一个callback，具体的到对应方法里面会描述。这里先讲返回参数，callback有两个参数，errno,errmsg。可以依此判断调用结果。
 
 ##### errno的值：
