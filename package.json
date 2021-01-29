@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/molujinweiliang/fxl_mp_sdk.git"
   },
+
   "scripts": {
     "install docsify": "npm i docsify-cli -g",
     "docs": "docsify serve docs",
