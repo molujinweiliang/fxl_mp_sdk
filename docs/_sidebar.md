@@ -15,6 +15,9 @@
     * [添加锁](/zh-cn/sdk/addLock.md "添加锁")
     * [设置管理员密码](/zh-cn/sdk/setPassword.md "设置管理员密码")
     * [校准时间](/zh-cn/sdk/CheckTime.md "校准时间")
+    * [卡片管理](/zh-cn/sdk/card.md "卡片管理")
+    * [指纹管理](/zh-cn/sdk/finger-print.md "指纹管理")
+    * [开锁记录上传](/zh-cn/sdk/openHistory.md "开锁记录上传")
     * [恢复出厂设置](/zh-cn/sdk/reset.md "恢复出厂设置")
     * [SDK错误码](/zh-cn/sdk/errorMsg.md "SDK错误码")
     
