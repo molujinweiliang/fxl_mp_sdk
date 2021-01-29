@@ -10,4 +10,8 @@
     * [获取锁的详情](/zh-cn/api/lockInfo.md "获取锁的详情")
     * [api错误码](/zh-cn/api/lockInfo.md "获取锁的详情")
 - [SDK](/zh-cn/sdk/errorMsg.md)
+    * [开始](/zh-cn/sdk/start.md "开始")
+    * [SDK初始化](/zh-cn/sdk/init.md "初始化")
+    * [添加锁](/zh-cn/sdk/addLock.md "初始化")
     * [SDK错误码](/zh-cn/sdk/errorMsg.md "SDK错误码")
+    

@@ -9,7 +9,7 @@ export default class AddLock extends AbstractBlueTooth{
         super()
     }
 
-    start(){
+    start(timeout=120000){
         const that = this;
         return new Promise((resolve, reject) => {
             this.open().then(res=> this.searchNoLimit())
@@ -19,16 +19,23 @@ export default class AddLock extends AbstractBlueTooth{
                     reject(errorCodeCallback(code));
                 });
             _timerout = setTimeout(()=>{
-                console.log('停留时间过长，停止搜索');
-                uni.showToast({
-                    title: '停留时间过长，已停止搜索，下拉或退出再次进入此界面可重新搜索',
-                    icon: 'none'
-                })
+                console.warn('停留时间过长，基于性能考虑，停止搜索');
                 this.stopSearch();
-            }, 120000);
+            }, timeout);
             // 120000
         })
     }
+    onDeviceFound(callback){
+        this.EventBus.addEventListener('searchDeviceSuccess', (data)=>{
+            typeof callback == Function && callback(this.foundDevice);
+        });
+    }
+    offDeviceFound(){
+        if(this.EventBus.handlers.hasOwnProperty('searchDeviceSuccess')){
+            this.EventBus.dispatchEvent('searchDeviceSuccess');
+        }
+    }
+
 
     destroy(){
         return new Promise(async (resolve) => {
