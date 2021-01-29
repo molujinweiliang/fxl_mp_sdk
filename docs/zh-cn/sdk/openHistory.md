@@ -1,16 +1,16 @@
 ## 实例化恢复出厂设置类
-ResetLock 实例，可通过 new ResetLock() 获取。
+OpenHistory 实例，可通过 new OpenHistory() 获取。
 ```
-import { ResetLock } from './miniprogram_npm/fxl-mp-sdk/main'
-const resetLock = new ResetLock();
+import { OpenHistory } from './miniprogram_npm/fxl-mp-sdk/main'
+const openHistory = new OpenHistory();
 或
 const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
-const resetLock = new SDK.ResetLock();
+const openHistory = new SDK.OpenHistory();
 ```
 
 ### 方法：
 
-## resetLock.reset()
+## openHistory.uploadHistory()
 恢复出厂设置
 
 类型： PROMISE
@@ -29,7 +29,7 @@ const resetLock = new SDK.ResetLock();
 ##### 示例：
 ```
    let mac_id = 'FE:51:6F:BB:A3:48'
-   resetLock.reset(mac_id).then(res=>{
+   openHistory.uploadHistory(mac_id).then(res=>{
       console.log(res);
       if(res.errno==0){
       

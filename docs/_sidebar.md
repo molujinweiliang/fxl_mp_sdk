@@ -12,7 +12,9 @@
 - [小程序SDK](/zh-cn/sdk/errorMsg.md)
     * [开始](/zh-cn/sdk/start.md "开始")
     * [SDK初始化](/zh-cn/sdk/init.md "初始化")
-    * [添加锁](/zh-cn/sdk/addLock.md "初始化")
-    * [恢复出厂设置](/zh-cn/sdk/reset.md "初始化")
+    * [添加锁](/zh-cn/sdk/addLock.md "添加锁")
+    * [设置管理员密码](/zh-cn/sdk/setPassword.md "设置管理员密码")
+    * [校准时间](/zh-cn/sdk/CheckTime.md "校准时间")
+    * [恢复出厂设置](/zh-cn/sdk/reset.md "恢复出厂设置")
     * [SDK错误码](/zh-cn/sdk/errorMsg.md "SDK错误码")
     
