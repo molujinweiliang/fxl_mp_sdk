@@ -5,11 +5,10 @@
 // import OpenHistory from './operation/open-history.js';
 // import ResetLock from './operation/reset-lock.js';
 // import SetPassword from './operation/set-password.js';
-import Init from "./operation/init";
-// import OpenLock from './operation/open-lock';
+import Init from "./operation/init.js";
+// import OpenLock from './operation/open-lock.js';
 
-
-module.exports = {
+export {
     // AddLock,
     // Card,
     // CheckTime,

@@ -2,6 +2,7 @@ import { AbstractBlueTooth, errorMsg } from 'abstract-bluetooth';
 const { errorCodeCallback, errorLogFunction } =  errorMsg;
 import { getAesKey, addLockCallBack, errorLog } from "@/static/js/modules/bluetooth";
 var _timerout = null;
+import regeneratorRuntime from '../utils/runtime.js';
 
 export default class AddLock extends AbstractBlueTooth{
     constructor(){
