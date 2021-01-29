@@ -13,5 +13,6 @@
     * [开始](/zh-cn/sdk/start.md "开始")
     * [SDK初始化](/zh-cn/sdk/init.md "初始化")
     * [添加锁](/zh-cn/sdk/addLock.md "初始化")
+    * [恢复出厂设置](/zh-cn/sdk/addLock.md "初始化")
     * [SDK错误码](/zh-cn/sdk/errorMsg.md "SDK错误码")
     
