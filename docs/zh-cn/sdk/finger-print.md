@@ -1,4 +1,4 @@
-## 实例化卡片类
+## 实例化指纹类
 FingerPrint 实例，可通过 new FingerPrint 获取。
 ```
 import { FingerPrint } from './miniprogram_npm/fxl-mp-sdk/main'

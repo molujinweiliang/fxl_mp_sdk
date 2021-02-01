@@ -1,4 +1,4 @@
-## 实例化恢复出厂设置类
+## 实例化开锁记录类
 OpenHistory 实例，可通过 new OpenHistory() 获取。
 ```
 import { OpenHistory } from './miniprogram_npm/fxl-mp-sdk/main'

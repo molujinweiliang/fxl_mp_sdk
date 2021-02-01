@@ -1,7 +1,7 @@
 # 初始化
 
 
-## 实例化添加锁类
+## 实例化开锁类
 OpenLock 实例，可通过 new OpenLock() 获取。
 ```
 import { OpenLock } from './miniprogram_npm/fxl-mp-sdk/main'
