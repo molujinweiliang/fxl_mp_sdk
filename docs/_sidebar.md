@@ -13,6 +13,7 @@
     * [开始](/zh-cn/sdk/start.md "开始")
     * [SDK初始化](/zh-cn/sdk/init.md "初始化")
     * [添加锁](/zh-cn/sdk/addLock.md "添加锁")
+    * [开锁](/zh-cn/sdk/openLock.md "开锁")
     * [设置管理员密码](/zh-cn/sdk/setPassword.md "设置管理员密码")
     * [校准时间](/zh-cn/sdk/CheckTime.md "校准时间")
     * [卡片管理](/zh-cn/sdk/card.md "卡片管理")
