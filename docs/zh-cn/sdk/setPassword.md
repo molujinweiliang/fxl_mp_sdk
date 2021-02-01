@@ -10,7 +10,7 @@ const setPassword = new SDK.SetPassword();
 
 ### 方法：
 
-## setPassword.reset()
+## setPassword.setPassword()
 设置管理员密码
 
 类型： PROMISE
