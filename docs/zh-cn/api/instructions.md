@@ -3,7 +3,7 @@
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
 |CLIENT | 是  |string |写SDK1.1,调用接口终端设备   |
-|ACCESS-KEY | 是  |string |惊奇锁平台分配的ACCESS-KEY   |
+|ACCESS-KEY | 是  |string |平台分配的ACCESS-KEY   |
 |PLATFORM | 是  |string |调用设备系统，IOS或者android,大小写无所谓   |
 |DEVICE | 是  |string |手机型号，比如：iphone11，MIX3   |
 |SYSTEMVERSION |否  |string |系统的版本号，比如：android10，IOS14.4   |
@@ -11,8 +11,8 @@
 
 TOKEN算法：
 第一步：
-String access_key = ""; //惊奇锁平台分配的access_key;
-String access_secret = "";//惊奇锁平台分配的access_secret;
+String access_key = ""; //平台分配的access_key;
+String access_secret = "";//平台分配的access_secret;
 String key = "c2e2a195b0a8add57542651f0130cc53"; //写死
 String iv = "SDKV@1.1";//写死
 

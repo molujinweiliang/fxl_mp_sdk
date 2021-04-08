@@ -1,5 +1,5 @@
 {
-  "name": "mp-sdk",
+  "name": "zm_mp-sdk",
   "version": "1.0.1",
   "description": "",
   "main": "dist/main.js",
