@@ -1,5 +1,5 @@
 {
-  "name": "fxl-mp-sdk",
+  "name": "mp-sdk",
   "version": "1.0.1",
   "description": "",
   "main": "dist/main.js",
@@ -15,7 +15,7 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://molujinweiliang.github.io/fxl_mp_sdk/",
+  "homepage": "https://molujinweiliang.github.io/mp_sdk/",
   "dependencies": {
     "abstract-bluetooth": "^1.0.1",
     "crypto-js": "^4.0.0"
