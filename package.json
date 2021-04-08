@@ -6,7 +6,7 @@
   "miniprogram": "dist/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/molujinweiliang/mp_sdk/tree/zmwl"
+    "url": "git+https://github.com/molujinweiliang/fxl_mp_sdk/tree/zmwl"
   },
   "scripts": {
     "install docsify": "npm i docsify-cli -g",
@@ -15,7 +15,7 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://molujinweiliang.github.io/mp_sdk/",
+  "homepage": "https://molujinweiliang.github.io/fxl_mp_sdk/",
   "dependencies": {
     "abstract-bluetooth": "^1.0.1",
     "crypto-js": "^4.0.0"
