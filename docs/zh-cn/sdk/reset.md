@@ -1,10 +1,10 @@
 ## 实例化恢复出厂设置类
 ResetLock 实例，可通过 new ResetLock() 获取。
 ```
-import { ResetLock } from './miniprogram_npm/fxl-mp-sdk/main'
+import { ResetLock } from './miniprogram_npm/zm_mp-sdk/main'
 const resetLock = new ResetLock();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const resetLock = new SDK.ResetLock();
 ```
 

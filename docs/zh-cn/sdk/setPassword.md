@@ -1,10 +1,10 @@
 ## 实例化设置管理员密码类
 ResetLock 实例，可通过 new ResetLock() 获取。
 ```
-import { SetPassword } from './miniprogram_npm/fxl-mp-sdk/main'
+import { SetPassword } from './miniprogram_npm/zm_mp-sdk/main'
 const setPassword = new SetPassword();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const setPassword = new SDK.SetPassword();
 ```
 

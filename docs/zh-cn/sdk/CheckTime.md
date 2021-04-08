@@ -1,10 +1,10 @@
 ## 实例化校准时间类
 CheckTime 实例，可通过 new CheckTime() 获取。
 ```
-import { CheckTime } from './miniprogram_npm/fxl-mp-sdk/main'
+import { CheckTime } from './miniprogram_npm/zm_mp-sdk/main'
 const checkTime = new CheckTime();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const checkTime = new SDK.CheckTime();
 ```
 

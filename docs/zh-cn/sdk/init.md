@@ -4,10 +4,10 @@
 ## 实例化初始化类
 init 实例，可通过 new Init() 获取。
 ```
-import { Init } from './miniprogram_npm/fxl-mp-sdk/main'
+import { Init } from './miniprogram_npm/zm_mp-sdk/main'
 const init = new Init();
 
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const init = new SDK.Init();
 ```
 

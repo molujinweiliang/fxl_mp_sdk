@@ -1,10 +1,10 @@
 ## 实例化卡片类
 Card 实例，可通过 new Card() 获取。
 ```
-import { Card } from './miniprogram_npm/fxl-mp-sdk/main'
+import { Card } from './miniprogram_npm/zm_mp-sdk/main'
 const card = new Card();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const card = new SDK.Card();
 ```
 

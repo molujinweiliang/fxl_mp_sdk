@@ -1,10 +1,10 @@
 ## 实例化开锁记录类
 OpenHistory 实例，可通过 new OpenHistory() 获取。
 ```
-import { OpenHistory } from './miniprogram_npm/fxl-mp-sdk/main'
+import { OpenHistory } from './miniprogram_npm/zm_mp-sdk/main'
 const openHistory = new OpenHistory();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const openHistory = new SDK.OpenHistory();
 ```
 

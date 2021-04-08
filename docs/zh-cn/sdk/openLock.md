@@ -4,10 +4,10 @@
 ## 实例化开锁类
 OpenLock 实例，可通过 new OpenLock() 获取。
 ```
-import { OpenLock } from './miniprogram_npm/fxl-mp-sdk/main'
+import { OpenLock } from './miniprogram_npm/zm_mp-sdk/main'
 const openLock = new OpenLock();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/zm_mp-sdk/main')
 const openLock = new SDK.OpenLock();
 ```
 
