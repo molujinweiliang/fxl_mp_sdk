@@ -6,7 +6,7 @@
   "miniprogram": "dist/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/molujinweiliang/fxl_mp_sdk.git"
+    "url": "git+https://github.com/molujinweiliang/mp_sdk/tree/zmwl"
   },
   "scripts": {
     "install docsify": "npm i docsify-cli -g",
