@@ -1,11 +1,3 @@
-![logo](_media/logo.png ':class=coverimg')
-
-# 蜂星锁对接文档 <small>1.0</small>
-
-> 全球第一个「人证合一」的门锁解决方案
-
-- 超强的安全性
-- 超低的成本
-- 极佳的体验
+# 掌门物联锁对接文档 <small>1.0</small>
 
 [Get Started](README.md)

@@ -1,2 +1,2 @@
-# fxl_mp_sdk
+# mp_sdk
 蓝牙锁小程序sdk
