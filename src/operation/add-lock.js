@@ -27,7 +27,7 @@ export default class AddLock extends AbstractBlueTooth{
     }
     onDeviceFound(callback){
         this.EventBus.addEventListener('searchDeviceSuccess', (data)=>{
-            typeof callback == Function && callback(this.foundDevice);
+            typeof callback == "function" && callback(this.foundDevice);
         });
     }
     offDeviceFound(){
